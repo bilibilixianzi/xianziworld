@@ -1,0 +1,28 @@
+.yuanjiao{
+	border:10px solid;
+	border-radius: 25px;
+}
+.yinying{
+	border:none solid;
+	border-radius: 25px 40px;
+	width:200px;
+	height:200px;
+	background-color:yellow;
+	box-shadow: 10px 10px 5px #1362B7;
+}
+#bgimg{
+	width: 643px;
+	height: 917px;
+	background-image: url(../img/lemlam.jpg);
+	background-size: 643px 917px;
+}
+#bg{
+	width: 200px;
+	height: 200px;
+	/*height: 55px;
+    background: -webkit-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
+    background: -o-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet); 
+    background: -moz-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet); 
+	background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);*/
+	 background: radial-gradient(red, green, blue);
+}
