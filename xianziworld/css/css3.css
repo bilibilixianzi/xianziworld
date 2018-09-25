@@ -26,3 +26,23 @@
 	background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);*/
 	 background: radial-gradient(red, green, blue);
 }
+/*@font-face {
+	font-family:myFirstFont;
+	src: url(sansation_bold.woff);
+	font-weight: bold;
+}*/
+@keyframs myfirst{
+	0%{background-color: red;left: 0px;top: 0px;}
+	25%{background-color: yellow;left: 200px;top: 0px;}
+	50%{background-color: blue;left: 200px;top: 200px;}
+	75%{background-color: green;left: 0px;top: 200px;}
+	100%{background-color: red;left: 0px;top: 0px;}
+}
+@-webkit-keyframes myfirst
+{
+    0%{background-color: red;left: 0px;top: 0px;}
+	25%{background-color: yellow;left: 200px;top: 0px;}
+	50%{background-color: blue;left: 200px;top: 200px;}
+	75%{background-color: green;left: 0px;top: 200px;}
+	100%{background-color: red;left: 0px;top: 0px;}
+}
