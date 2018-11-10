@@ -6,8 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <title>馅子World</title>
 
-<link rel="stylesheet" type="text/css" href="css/normalize.css" /><!--CSS RESET-->
-<link rel="stylesheet" type="text/css" href="css/demo.css"><!--演示页面样式，使用时可以不引用-->
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/jia.css">
+<link rel="stylesheet" type="text/css" href="css/demo.css">
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/circle.css">
 <style>
@@ -18,11 +19,30 @@
 	a{text-decoration:none;}
 	body {margin:0;padding:0;line-height:1.5em;font-family:Georgia,"Times New Roman",Times,serif;font-size:12px;color:#33322e;background: #39443D url(images/templatemo_body_bg.jpg) repeat-x;/*	background: #47443c url(images/templatemo_body_bg_2.jpg) repeat-x;	*/}
 
-
 </style>
 </head>
 <body>
-
+<div id="audioBox" style="display: none;">
+	<script>
+		window.onload=function(){
+			var arr=["http://www.ytmp3.cn/down/46257.mp3","http://www.ytmp3.cn/down/43353.mp3","http://www.ytmp3.cn/down/50188.mp3","http://www.ytmp3.cn/down/42954.mp3","http://www.ytmp3.cn/down/53204.mp3","http://www.ytmp3.cn/down/54096.mp3"];
+			var myAudio =new Audio();
+			myAudio.preload = true;
+			myAudio.controls = true;
+			myAudio.src=arr.pop();
+			myAudio.addEventListener('ended',playEndedHandler,false);
+			myAudio.play()
+			document.getElementById("audioBox").appendChild(myAudio);
+			myAudio.loop=false;
+			function playEndedHandler(){ 
+				myAudio.src = arr.pop(); 
+				myAudio.play(); 
+				console.log(arr.length); 
+				!arr.length && myAudio.removeEventListener('ended',playEndedHandler,false);
+			}
+		}
+	</script>
+</div>
 <div class="holderCircle">
 
 	<div class="dotCircle">
@@ -74,7 +94,7 @@
 			<font size="3">欢迎来到馅子World</font>
 		</div>
 		<div class="CirItem CirItem2">
-			<a href=""><font size="4">登录</font></a>
+			<a href="login.html"><font size="4">登录</font></a>
 		</div>
 		<div class="CirItem CirItem3">
 			<a href=""><font size="4">小说World</font></a>
@@ -89,10 +109,10 @@
 			<a href=""><font size="4">创作者</font></a>
 		</div>
 		<div class="CirItem CirItem7">
-			<a href=""><font size="4">分享本世界</font></a>
+			<a href="otherhtml/fenxiang.html"><font size="4">分享本站</font></a>
 		</div>
 		<div class="CirItem CirItem8">
-			<a href=""><font size="4">世界论坛</font></a>
+			<a href=""><font size="4">个人中心</font></a>
 		</div>
 		<div class="CirItem CirItem9">
 			<a href=""><font size="4">联系客服</font></a>
