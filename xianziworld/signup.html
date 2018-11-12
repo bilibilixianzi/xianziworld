@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en" class="no-js">
 
     <head>
@@ -11,40 +10,38 @@
         <meta name="author" content="">
 
         <!-- CSS -->
-        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
+        <!--<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>-->
         <link rel="stylesheet" href="assets/css/reset.css">
         <link rel="stylesheet" href="assets/css/supersized.css">
         <link rel="stylesheet" href="assets/css/style.css">
-
+        <style>
+        	.error{color: red;}
+        </style>
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
 
     </head>
-
     <body>
-
         <div class="page-container">
-            <h1>Login</h1>
-            <form action="PHP/login.php" method="post" onSubmit="return InputCheck(this)">
-                <input type="text" name="username" class="username" placeholder="Username/email">
-                <input type="password" name="password" class="password" placeholder="Password">
-                <button type="submit">Sign in</button>
+            <h1>Sign Up</h1>
+            <form name="myForm" action="PHP/signup.php" method="post" onsubmit="return validateForm()">
+                <input type="text" name="username" class="username" placeholder="Username" value="">
+                <input type="password" name="password" class="password" placeholder="Password" value="">
+                <input type="password" name="conpassword" class="password" placeholder="Confirm Password" value="">
+                <input type="text" name="email" class="username" placeholder="email" value="">
+                <button type="submit">Sign up</button> 
                 <div class="error"><span>+</span></div>
             </form>
-            <div class="connect">
-                <p>or connect with</p>
-                <p>
-                    <a class="qq" href=""></a>
-                    <a class="weixin" href=""></a>
-                </p>
-            </div>
         </div>
-        <div align="center">Not registered?&nbsp;&nbsp;<a href="signup.html" target="_blank" title="XianziWorld">Sign up</a></div>
+        <br>
+        <br>
+        <div align="center">Registration Failed？<a href="aboutweb.html#toubiao" target="_blank" title="XianziWorld">Contact Us</a></div>
         <script src="assets/js/jquery-1.8.2.min.js"></script>
         <script src="assets/js/supersized.3.2.7.min.js"></script>
         <script src="assets/js/supersized-init.js"></script>
+        <script src="js/signUp.js"></script>
         <!--<script src="assets/js/scripts.js"></script>-->
     </body>
 </html>
