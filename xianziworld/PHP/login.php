@@ -5,7 +5,7 @@
 	$username=htmlspecialchars($_post['username']);
 	$password=md5($_POST['password']);
 	include('conn.php');
-	$check_query=mysql_query("SELECT id FROM userxx WHERE username='$username' AND password='$password';")
+	$check_query=mysql_query($conn,"SELECT id FROM userxx WHERE username= $username AND password= $password ");
 	if($result = mysql_fetch_array($check_query)){
 		session_start();
 		$_SESSION['username']=$username;
