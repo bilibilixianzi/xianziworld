@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			a{text-decoration:none}
+            a:link {color:#000000;text-decoration:none;}
+            a:visited {color:#000000;text-decoration:none;}
+            a:hover {color:#000000;text-decoration:none;}
+            a:active {color:#000000;text-decoration:none;}
+			#top{
+				position: absolute;
+				width: 100%;
+				height: 60px;
+				top: 65%;
+				margin: 0 auto;
+				/*left: 346px;*/
+				background-image: url(image/hhhhh.png);
+				/*border: dashed;*/
+			}
+			#tap{
+				/*border-collapse: 100px;*/
+				position: absolute;
+				width: 228.75px;
+				height: 60px;
+				/*border: dashed;*/
+				left: 346px;
+				display: inline-block;
+				text-align: center;
+				line-height: 60px;
+				background-image: url(image/hhhhh.png);
+			}
+			#tap1{
+				/*border-collapse: 100px;*/
+				position: absolute;
+				width: 228.75px;
+				height: 60px;
+				left: 574.75px;
+				/*border: dashed;*/
+				display: inline-block;
+				text-align: center;
+				line-height: 60px;
+/*				float: left;*/
+				background-image: url(image/hhhhh.png);
+			}
+			#tap2{
+				/*border-collapse: 100px;*/
+				position: absolute;
+				width: 228.75px;
+				height: 60px;
+				left: 803.5px;
+				/*border: dashed;*/
+				display: inline-block;
+				text-align: center;
+				line-height: 60px;
+				/*float: left;*/
+				background-image: url(image/hhhhh.png);
+			}
+			#tap3{
+				/*border-collapse: 100px;*/
+				position: absolute;
+				width: 228.75px;
+				height: 60px;
+				left: 1032.25px;
+				/*border: dashed;*/
+				display: inline-block;
+				text-align: center;
+				line-height: 60px;
+				/*float: left;*/
+				background-image: url(image/hhhhh.png);
+			}
+			#tap4{
+				/*border-collapse: 100px;*/
+				position: absolute;
+				width: 228.75px;
+				height: 60px;
+				left: 1261px;
+				/*border: dashed;*/
+				display: inline-block;
+				text-align: center;
+				line-height: 60px;
+				/*float: left;*/
+				background-image: url(image/hhhhh.png);
+			}
+			* {
+			    margin: 0;
+			    padding: 0;
+			}
+			.container {
+			    height: 70px;
+			    width: 500px;
+			    /*margin: 100px auto 0 auto;*/
+			    position: absolute;
+			    top: 60px;
+			    left: 950px;
+			}
+			.parent {
+			    position: relative;
+			}
+			.search {
+			    width: 300px;
+			    height: 40px;
+			    border-radius: 18px;
+			    outline: none;
+			    border: 1px solid #ccc;
+			    padding-left: 20px;
+			    position: absolute;
+			}
+			.btn {
+			    height: 35px;
+			    width: 35px;
+			    position: absolute;
+			    background: url("image/1.jpg") /*no-repeat 2px 99px*/;
+			   /*background-color: #000;*/
+			    top: 4px;
+			    left: 280px;
+			    border: none;
+			    outline: none;
+			    cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<script src="jqery/jquery-1.9.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#tap").hover(function(){
+					$("#tap").css("background-image","url(image/2333.png)")
+				});
+				$("#tap").mouseleave(function(){
+					$("#tap").css("background-image","url(image/hhhhh.png)")
+				});
+				$("#tap1").hover(function(){
+					$("#tap1").css("background-image","url(image/2333.png)")
+				});
+				$("#tap1").mouseleave(function(){
+					$("#tap1").css("background-image","url(image/hhhhh.png)")
+				});
+				$("#tap2").hover(function(){
+					$("#tap2").css("background-image","url(image/2333.png)")
+				});
+				$("#tap2").mouseleave(function(){
+					$("#tap2").css("background-image","url(image/hhhhh.png)")
+				});
+				$("#tap3").hover(function(){
+					$("#tap3").css("background-image","url(image/2333.png)")
+				});
+				$("#tap3").mouseleave(function(){
+					$("#tap3").css("background-image","url(image/hhhhh.png)")
+				});
+				$("#tap4").hover(function(){
+					$("#tap4").css("background-image","url(image/2333.png)")
+				});
+				$("#tap4").mouseleave(function(){
+					$("#tap4").css("background-image","url(image/hhhhh.png)")
+				});
+			});
+			document.documentElement.style.overflow='hidden';
+		</script>
+		<div>
+			<a style="margin-left: 400px;" href="../index.html"><img width="200px" src="../img/a.png" /></a>
+		</div>
+		<div class="container">
+		    <form action="" class="parent">
+		        <input type="text" class="search" placeholder="搜索">
+		        <input type="button" name="" id="" class="btn">
+		    </form>
+		</div>
+		<div id="top">
+			<a href="nr/top1/index.php" target="fc2"><span id="tap">首页</span></a>
+			<a href="nr/top2/index.php" target="fc2"><span id="tap1">漫画</span></a>
+			<a href="nr/top3/index.php" target="fc2"><span id="tap2">排行</span></a>
+			<a href="nr/top4/index.php" target="fc2"><span id="tap3">资讯</span></a>
+			<!--<a href="nr/top4/index.html"><span id="tap4">个人中心</span></a>-->
+		</div>
+	</body>
+</html>

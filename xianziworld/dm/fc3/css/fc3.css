@@ -1,0 +1,19 @@
+#td2{
+	width: 245px;
+	height: 40px;
+	border-bottom:1px dashed #c2c2c2;
+}
+#td1{
+	width: 40px;
+	height: 40px;
+	/*border-bottom:1px dashed #c2c2c2;*/
+	background-color:#D0D6D6;
+	text-align: center;
+}
+#td3{
+	width: 40px;
+	height: 40px;
+	/*border-bottom:1px dashed #c2c2c2;*/
+	background-color:#C0392B;
+	text-align: center;
+}

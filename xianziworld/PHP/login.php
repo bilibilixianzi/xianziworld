@@ -1,12 +1,14 @@
 <?php
-	if(!isset($_POST['submit'])){
+	/*if(!isset($_POST['submit'])){
 		exit('非法访问!');
-	}
-	$username=htmlspecialchars($_post['username']);
+	}*/
+	$username=$_POST['username'];
 	$password=md5($_POST['password']);
 	include('conn.php');
-	$check_query=mysql_query($conn,"SELECT id FROM userxx WHERE username= $username AND password= $password ");
-	if($result = mysql_fetch_array($check_query)){
+	$result=null;
+	$check_query=mysqli_query($conn,"SELECT id FROM userxx WHERE username= $username AND password= $password ");
+	$result=mysqli_fetch_all($check_query);
+	if($result!=null){
 		session_start();
 		$_SESSION['username']=$username;
 		$_SESSION['userid']=$result['id'];
@@ -22,4 +24,5 @@
 		echo '注销成功! 点击此处登录 <a href="../login.html">登录</a>';
 		exit;
 	}
+	mysqli_close($conn);
 ?>

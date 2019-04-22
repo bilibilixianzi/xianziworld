@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+        <style>
+        	.g1{font-size:20px;}
+			a:link {font-size: 15px; color:#474747; text-decoration: none; } a:visited { font-size: 15px; color:#474747; text-decoration: none; } a:hover { font-size: 15px; color: #36648B; text-decoration: none; } 
+		</style>
+        <script src="js/jquery-1.9.1.min.js"></script>
+        
+		<script>
+			$(document).ready(function(){
+				$("#s-1").hover(function(){
+					$("#s-1").css("background-position","left");
+				});
+				$("#s-1").mouseleave(function(){
+					$("#s-1").css("background-position","right");
+				});
+				$("#s-2").hover(function(){
+					$("#s-2").css("background-position","left");
+				});
+				$("#s-2").mouseleave(function(){
+					$("#s-2").css("background-position","right");
+				});
+				$("#s-3").hover(function(){
+					$("#s-3").css("background-position","left");
+				});
+				$("#s-3").mouseleave(function(){
+					$("#s-3").css("background-position","right");
+				});
+				$("#s-4").hover(function(){
+					$("#s-4").css("background-position","left");
+				});
+				$("#s-4").mouseleave(function(){
+					$("#s-4").css("background-position","right");
+				});
+			});
+		</script>
+	</head>
+	<body background="img/zzpic17012.jpg">
+    <div style="width:auto;margin-left:600px;height:auto;margin-bottom:auto;margin-top:auto;">
+    	<a href="../index.html"><img src="./img/a.png"></a>
+    </div>
+    	<form name="formsc" action="php/client.php" enctype="multipart/form-data" method="post">
+    		 <div style="width:1100px;margin-left:270px;">
+        	<ul>
+            	<li><font face="楷体"><b>作品类型</b></font> &nbsp;<label><input name="type" type="radio" value="photo"/>图片 </label><label><input name="type" type="radio" value="xs" />小说</label>
+            		<label><input name="type" type="radio" value="dm" />漫画 </label></li><br /><br />
+            	<li><font face="楷体"><b>上传文件</b></font> &nbsp;<input type="file" name="upload[]"  multiple="multiple" /></li><br /><br />
+                <li><font face="楷体"><b>有无水印</b></font> &nbsp;<label><a href="watermark.exe" download="">下载添加水印文件</a> </li><br /><br />
+				<li><font face="楷体"><b>作品标题</b></font> &nbsp;<input type="text" name = "tatle"></li><br /><br />
+				<li><font face="楷体"><b>作品类别</b></font> &nbsp;	<select name="carline"  ><option value="photo">图片</option><option value="bgimg">壁纸</option><option value="cos">cos</option></label> 
+<option value="longxs">长篇小说</option><option value="smallxs">短篇小说</option><option value="xsing">连载小说</option><option value="dm">漫画</option></select></li><br /><br />
+                <li><font face="楷体"><b>作品简介</b></font> &nbsp;<textarea name="introduction" rows="10" cols="120"></textarea></li><br /><br />
+                <li><font face="楷体"><b>上传封面</b></font> &nbsp;<input type="file" name="fengmian"  multiple="multiple" /></li><br /><br />
+                <button type="submit" style="margin-left:370px;width:200px;height:50px;" /><font size="5">提交</font>
+            </ul>
+            </div>
+        </form>
+ 
+	</body>
+</html>
