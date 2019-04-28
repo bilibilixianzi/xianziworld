@@ -4,34 +4,41 @@
 	/*id username webs*/
 	include('conn.php');
 	$id="1";$username="xianzi";
-	$worksname=$_POST['tatle'];$workstext=$_POST['introduction'];$webs="www.baidu.com";
+	$worksname=$_POST['tatle'];$workstext=$_POST['introduction'];
 	$type=$_POST['type'];
 	$sel=$_POST['carline'];
 	if($type=="photo"){
 		if($sel=="bgimg"){
 			$stype="bgimg";
 			$ssql="bglan";
+			$webs="";
 		}elseif($sel=="cos"){
 			$stype="cos";
 			$ssql="coslan";
+			$webs="";
 		}else{
 			$stype="photo";
 			$ssql="photolan";
+			$webs="";
 		}
 	}elseif($type=="xs"){
 		if($sel=="longxs"){
 			$stype="longxs";
 			$ssql="longxslan";
+			$webs="";
 		}elseif($sel=="xsing"){
 			$stype="xsing";
 			$ssql="xsinglan";
+			$webs="";
 		}else{
 			$stype="smallxs";
 			$ssql="smallxslan";
+			$webs="";
 		}
 	}elseif($type=="dm"){
 		$stype="dm";
 		$ssql="workslan";
+		$webs="";
 	}else{
 		/*跳转404界面*/
 	}
@@ -48,7 +55,8 @@
 			}
  			if(move_uploaded_file($tmpFilePath, $newFilePath)) {	
  			}else{
- 				/*跳转404界面*/
+ 				header("location:http://127.0.0.1/xianziworld/xianziworld/404.html");
+ 				
  			}
 		}
 	}
@@ -58,7 +66,7 @@
 	if(move_uploaded_file($tFilePath,$weFilePath)){
 		$fengmian="../../../firesworld/".$id."/".$type."/".$stype."/".$_FILES['fengmian']['name'];
 	}else{
-		/*404*/
+		header("location:http://127.0.0.1/xianziworld/xianziworld/404.html");
 	}
 	$sql="INSERT INTO $ssql(id,username,worksname,workstext,webs,fengmian,workspath,timestamp,dianji,zan)
 	VALUES('$id','$username','$worksname','$workstext','$webs','$fengmian','$workspath','$timestamp','0','0')";
@@ -66,7 +74,7 @@
 		/*跳转个人中心*/
 	}else{
 		echo $sql;
-		/*404*/
+		header("location:http://127.0.0.1/xianziworld/xianziworld/404.html");
 	}
 	mysqli_close($conn);
 ?>
