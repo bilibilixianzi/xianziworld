@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>首页</title>
+		<title>短篇小说</title>
 		<link rel="stylesheet" href="css/head.css">
 		<script src="jqery/jquery-1.9.1.min.js"></script>
 		<script>
@@ -86,7 +86,7 @@
 		$biao="smallxslan";
 		if(getRow($x,$sty,$Da,$biao)!=null){
 			$Row=array();
-			$Row=getRow($x,$sty,$Da);
+			$Row=getRow($x,$sty,$Da,$biao);
 		}else{
 			$Row=array("nob"=>"","id"=>"","username"=>"暂无数据","worksname"=>"","workstext"=>"暂无数据","webs"=>"","fengmian"=>"../../img/204621_Q4IV_2353203.png");
 		}

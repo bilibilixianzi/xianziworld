@@ -1,7 +1,7 @@
 <?php
-	/*if(!isset($_POST['submit'])){
+	if(!isset($_POST['submit'])){
 		exit('非法访问!');
-	}*/
+	}
 	$username=$_POST['username'];
 	$password=md5($_POST['password']);
 	include('conn.php');
@@ -11,12 +11,12 @@
 	if($result!=null){
 		session_start();
 		$_SESSION['username']=$username;
-		$_SESSION['userid']=$result['id'];
-		echo $username,'<a href="my.php">用户中心</a><br />';
-		echo '点击此处 <a href="login.php?action=logout">注销</a> 登录!<br />';
+		$_SESSION['id']=$result['id'];
+		$id=$result['id'];
+		header("http://www.xianziworld.club/otherhtml/center.php?id=$id");
 		exit;
 	}else{
-		exit('登录失败! 点击此处 <a href="javascript:history.back(-1);">返回</a> 重试');
+		header('http://www.xianziworld.club/signup.html');
 	}
 	if($_GET['action']=="logout"){
 		unset($_SESSION['id']);

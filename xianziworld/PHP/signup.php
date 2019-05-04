@@ -30,12 +30,12 @@
          <center>项目详情：https://github.com/bilibilixianzi/xianziworld</center>";
 		$mailer->send($email1,$title,$content);
 		sleep(2);
-		header("location:http://127.0.0.1/xianziworld/xianziworld/login.html");
+		header("www.xianziworld.cn/login.html");
 	}else{
 		//echo "Error: ".$sql."<br>".mysqli_error($conn);
 		echo"<h1>注册失败!'</h1>";
 		sleep(2);
-		header("location:http://127.0.0.1/xianziworld/xianziworld/signup.html");
+		header("www.xianziworld.cn/signup.html");
 	}
 	mysqli_close($conn);
 ?>

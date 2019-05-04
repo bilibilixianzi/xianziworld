@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>图片World</title>
+		<title>图片</title>
 		<link rel="stylesheet" type="text/css" href="../css/css-head.css"/>
 		<script src="../jqery/jquery-1.9.1.min.js"></script>
 	</head>
@@ -48,7 +48,7 @@
 		$biao="photolan";
 		if(getRow($x,$sty,$Da,$biao)!=null){
 			$Row=array();
-			$Row=getRow($x,$sty,$Da);
+			$Row=getRow($x,$sty,$Da,$biao);
 		}else{
 			$Row=array("nob"=>"","id"=>"","worksname"=>"","webs"=>"","fengmian"=>"../../img/204621_Q4IV_2353203.png");
 		}
